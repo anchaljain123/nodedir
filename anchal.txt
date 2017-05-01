@@ -1,0 +1,6 @@
+hi hello this is a demo file for FILEUPLOAD API 
+this is the input file
+we'll be writing into some writable file 
+topic is Advance NodeJs
+bye 
+see you later
