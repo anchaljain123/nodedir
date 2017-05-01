@@ -1,0 +1,22 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server.js"
+  },
+  "keywords": [],
+  "author": "anchjain <anchal.jain@tothenew.com>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.3.0",
+    "body-parser": "^1.17.1",
+    "events": "^1.1.1",
+    "express": "^4.15.2",
+    "file-system": "^2.2.2",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.9.4"
+  }
+}
