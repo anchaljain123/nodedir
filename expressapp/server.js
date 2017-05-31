@@ -15,7 +15,7 @@ function middleware(req, res, next) {
 }
 //app.use(middleware);
 router(app);
-app.use('/static',Express.static('views')); //forpublic srver //use-mapping
+app.use('/static',Express.static('views')); //forpublic server //use-mapping
 
 app.listen(PORT , () => {
     console.info('Server is running @http://localhost:%d',PORT); //connecting with server

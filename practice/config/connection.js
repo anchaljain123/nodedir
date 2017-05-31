@@ -11,4 +11,4 @@ db.on('open',(err,data)=>{
 db.on('error',(err,data)=>{
     if(err) console.log(err);
     console.log("Could not connect to Database");
-})
+});

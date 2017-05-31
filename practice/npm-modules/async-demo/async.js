@@ -13,4 +13,4 @@ for(let i=1;i<=5;i++){
 async.parallel(task,function (err,result) {
     if(err) console.log(err);
         console.log("<<<<<<<<<<<<<result",result);
-})
+});

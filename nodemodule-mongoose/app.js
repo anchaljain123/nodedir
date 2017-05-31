@@ -10,8 +10,6 @@ eventEmitter.on('connection',()=>{
 });
 eventEmitter.emit('connection');
 
-
-
 console.log("filenamepath : ",__filename);
 console.log("dirpath : ",__dirname)
 console.log("arguments : "+process.argv +" \narguments array : "+ process.argv.slice(2));

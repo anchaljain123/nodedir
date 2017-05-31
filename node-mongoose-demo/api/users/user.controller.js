@@ -6,7 +6,7 @@ exports.createUser = function(req,res,next) {
     userService.createUser(userData,res);
 };
 exports.updateUser = function(req,res,next) {
-    var userName = req.params.userName;
+    const userName = req.params.userName;
     userService.updateUser(userName,res);
 };
 

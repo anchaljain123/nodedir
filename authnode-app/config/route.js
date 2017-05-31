@@ -11,10 +11,8 @@ module.exports=(app) => {
         res.sendFile(path+'/Login.html');
     });
 
-    app.post('/login', passport.authenticate('local', {failureRedirect: '/login' ,
-        successRedirect: "/profile"}));//,failureFlash:"error in authentication",successFlash:"Welcome"
-
-
+    // app.post('/login', passport.authenticate('local', {failureRedirect: '/login' ,
+    //     successRedirect: "/profile"}));//,failureFlash:"error in authentication",successFlash:"Welcome"
     app.get('/auth/google',
         passport.authenticate('google', { scope: ['profile','email'] }));
 
@@ -23,6 +21,8 @@ module.exports=(app) => {
 
     app.get('/profile',(req,res)=>{
         if(req.isAuthenticated()){
+
+            console.log(req.user,"*******")
             res.render('/home/anchal/Desktop/nodedir/authnode-app/views/userProfile.ejs',{username:req.user})
         }else{
             res.redirect('/login');
@@ -33,13 +33,6 @@ module.exports=(app) => {
         req.logout();
         res.redirect('/');
     });
-
-    /*app.get('/auth/provider', passport.authenticate('provider'));
-    app.get('/auth/provider/callback',
-        passport.authenticate('provider', { successRedirect: '/',
-            failureRedirect: '/login' }));
-*/
-
 
 
 };

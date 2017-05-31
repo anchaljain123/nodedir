@@ -1,5 +1,5 @@
-var User = require('./user.model');
-console.log('user.service page---------');
+const User = require('./user.model');
+
 exports.getUser = function(res) {
 
     User.find({},function (err,data) {
@@ -18,7 +18,7 @@ exports.getUser = function(res) {
 exports.createUser = function(userData,res) {
     User.create(userData , function (err,data) {
         if(err){
-            console.log({msg: "Somwthing went wrong in post ",error: err});
+            console.log({msg: "Something went wrong in post ",error: err});
         }
         else{
             console.log(" Success ");
@@ -41,7 +41,6 @@ exports.getUser = function(userName,res) {
     })
 
 };
-
 exports.updateUser = function(userName,res) {
     User.update(userName,{userName:'pooja'},function (err,data) {
         if(err){
@@ -54,7 +53,6 @@ exports.updateUser = function(userName,res) {
     })
 
 };
-
 exports.deleteUser = function(userName,res) {
     User.deleteOne(userName,function (err,data) {
         if(err){
